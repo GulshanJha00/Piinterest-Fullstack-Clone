@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900">
+        <div class="flex justify-between ml-3 h-14">
+
+            <h1 class="text-red-600 font-bold text-2xl m-3 ml-4">Pinterest</h1>
+            <div class="flex">
+    
+                <a href="/profile" class=" text-white m-3 ml-7 font-medium text-lg">Profile</a>
+                <a href="/feed" class=" text-white m-3 ml-5 font-medium text-lg">Feed</a>
+                <a href="/logout" class="m-1 mr-3 ml-7  font-medium text-base border-3 bg-red-600 p-2 rounded-3xl w-24 pl-5 h-11 text-white">Logout</a>
+            </div>
+        </div>
+
+        <br>
+
+        <h1 class="text-white ml-7 font-medium text-lg m-3">Create a new post</h1>
+        <hr class="w-[94%] h-1 opacity-30 m-2 ml-7">
+<br>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+
+        <input type="file" name="file" class="text-white ml-7">
+        <br>
+        <input type="text" class="border-2 w-96 h-14 p-4 border-red-800 m-7 " name="filecaption" placeholder="Enter Caption">
+<br>
+        <button type="submit" class="m-1 mr-3 ml-7  font-medium text-base border-3 bg-red-600 p-2 rounded-3xl w-24 pl-3 h-11 text-white"">Upload</button>
+      </form>
+</body>
+</html>

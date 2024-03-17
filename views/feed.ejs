@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/feed.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+</head>
+<body class="bg-slate-900">
+
+        <div class="menu">
+          <img draggable="false" class="logo" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/pinterest-512.png">
+          <a class="home text-white">Home</a>
+          <a href="#" class="Explore text-white"> Explore</a>
+          <a href="#" class="Explore text-white">Create</a>
+          <input id="one" type="text" class="search-bar" placeholder="Search">
+          <button id="two" class="search-bar"></button>
+          <div class="icon-container">
+            <img tabindex="1" draggable="false" class="icon bell" src="https://i.hizliresim.com/rcvolcu.png">
+            <img tabindex="1" draggable="false" class="icon message" src="https://i.hizliresim.com/newumah.png">
+            <a href="/profile"><img tabindex="1" draggable="false" class="icon pp" src="https://i.pinimg.com/564x/bd/94/ce/bd94ce28cf8aefb521bac31d547f6409.jpg"></a>
+            <a href="/logout" class="m-1 mr-3 ml-7  font-medium text-base border-3 bg-red-600 p-2 rounded-3xl w-24 pl-5 h-11 text-white">Logout</a>
+
+            
+            
+          </div>
+        </div>
+
+
+
+        <div class="w-full min-h-screen bg-slate-900 px-10 py-8 text-white">
+          <div class="cards flex flex-wrap gap-8 items-start max-w-full h-auto">
+            <% posts.forEach(function(post){ %>
+
+              <div class="card" style="width: 18rem;">
+                  <img src="/images/uploads/<%= post.image%>" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= post.imageText %></h5>
+                  </div>
+                </div>
+            <% }) %>
+            </div>
+
+        </div>
+
+</body>
+</html>

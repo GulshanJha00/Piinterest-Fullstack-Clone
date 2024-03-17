@@ -1,0 +1,298 @@
+*{
+    outline:none;
+  }
+  body{
+    margin:10px;
+    padding:0px;
+    font-family: arial;
+    background-color: #383636;
+  }
+  
+  /*MENU*/
+  .menu{
+    max-width:100%;
+    display:flex;
+    /* margin-top: 10px; */
+    align-items:center;
+    padding:10px;
+    font-weight:bold;
+  }
+  .Explore{
+    padding: 0 20px 0 5px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+  }
+  .menu .logo{
+    width:30px;
+    cursor:pointer;
+    border-radius:50%;
+  }
+  .menu .logo:hover{
+    background:#eeeeee;
+  }
+  .menu .home{
+    color:#000;
+    text-decoration: none;
+    padding:12px 25px;
+    cursor:pointer;
+    /* user-select:none; */
+    border-radius:40px;
+    margin:0px 15px;
+  }
+  .menu .search-bar{
+    width:1000px;
+    margin:0px 5px;
+    padding:12px 35px;
+    border-radius:40px;
+    outline:none;
+    position:relative;
+    background-color:#efefef;
+    font-size:15px;
+    background-image:url("https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/search-3-256.png");
+    background-size:21px;
+    background-repeat:no-repeat;
+    background-position:center left;
+    background-position:10px;
+    color:gray;
+    border:4px solid transparent;
+  }
+  .menu .search-bar:hover{
+    background-color:#3333;
+  }
+  .menu .search-bar:focus{
+    border:4px solid #7bb5f0;
+    padding:12px 20px;
+    background-image:none;
+  }
+
+  .icon-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+  }
+  .icon-container .icon{
+    width:45px;
+    border-radius:50%;
+    cursor:pointer;
+    padding:10px;
+  }
+  .icon-container .icon:hover{
+    background-color:#eeeeee;
+  }
+  .icon-container .btn{
+    width:14px;
+    padding:5px;
+  }
+  .focus-bar{
+    width:250px;
+    height:350px;
+    border-radius:15px;
+    background:#fff;
+    border:2px solid #3333;
+    position:absolute;
+    top:40px;/*50px*/
+    left:-90px;
+    visibility:hidden;
+    opacity:0;
+    transition:all 0.3s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+    z-index:99;
+  }
+  .bell:focus + .message + .pp + .btn + .bell-bar, .bell-bar:focus{
+    visibility:visible;
+    opacity:1;
+    top:50px;
+  }
+  .message:focus + .pp + .btn + .bell-bar + .message-bar, .message-bar:focus{
+    visibility:visible;
+    opacity:1;
+    top:50px;
+  }
+  .pp:focus + .btn + .bell-bar + .message-bar + .pp-bar, .pp-bar:focus{
+    visibility:visible;
+    opacity:1;
+    top:50px;
+  }
+  .btn:focus + .bell-bar + .message-bar + .pp-bar + .btn-bar, .btn-bar:focus{
+    visibility:visible;
+    opacity:1;
+    top:50px;
+  }
+  .pp-bar a{
+    text-decoration:none;
+    padding:5px 15px;
+    border:2px solid #161b22;
+    color:#161b22;
+    border-radius:5px;
+  }
+  .pp-bar{
+    flex-direction:column;
+  }
+  .pp-bar img{
+    width:150px;
+    border-radius:50%;
+    margin-bottom:20px;
+  }
+  .pp-bar a:hover{
+    background:#161b22;
+    color:white;
+  }
+  
+  /*MINI SEARCH BAR*/
+  #two{
+    display:none;
+    padding:15px;
+  }
+  .responsive-search-bar{
+    max-width:100%;
+    padding:40px 10px;
+    text-align:center;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    top:-300px;
+    transition:all 0.3s;
+    overflow:hidden;
+    display:none;
+    background:#fff;
+    box-shadow: 0px 0px 2px 0px #333;
+    margin:0px 5px;
+    z-index:99;
+  }
+  .responsive-search-bar input{
+    width:100%;
+    height:35px;
+    outline:none;
+    border-radius:40px;
+    border:4px solid transparent;
+    background-image:url("https://cdn4.iconfinder.com/data/icons/music-ui-solid-24px/24/search-3-256.png");
+    background-size:21px;
+    background-repeat:no-repeat;
+    background-position:center left;
+    background-position:10px;
+    padding:0px 15px 0px 35px;
+    background-color:#efefef;
+  }
+  .responsive-search-bar input:focus{
+    border:4px solid #7bb5f0;
+  }
+  .responsive-search-bar p{
+    font-size:11px;
+    padding:11px;
+    margin-left:5px;
+    border-radius:50%;
+    cursor:pointer;
+    position:absolute;
+    top:-12px;
+    right:-1px;
+    transition:all 0.3s;
+  }
+  .responsive-search-bar p:hover{
+    background:#eeeeee;
+    transform:rotate(-180deg);
+  }
+  * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --red: #e60023;
+}
+
+  
+
+/* CONTAINER */
+
+
+  .containerper {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    margin-left: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+  }
+  
+  .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .name {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .username {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+  }
+  
+  .tagline,
+  .description {
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .button {
+    display: inline-block;
+    width: 200px;
+    margin-left: 260px;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #9a0000;
+  }
+  
+.btnnn {
+  margin-top: 50px;
+  padding: 8px;
+  border-radius: 15px;
+  border: 2px solid red;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
+}
+
+#pencil{
+  position: absolute;
+  left: 53%;
+  top: 29%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  width: 23px;
+  border-radius: 50%;
+  cursor: pointer;
+}
